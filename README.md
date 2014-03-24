@@ -1,4 +1,37 @@
 NSAttributedString-HTMLStyle
 ============================
 
-Creation of NSAttributedString out of HTML with per-tag attributes made easy.
+This repo consits of a few categories for dealing with `HTML` and `NSAttributedString`s. 
+###HEY! Apple provided me with methods for these tasks.
+
+Yes, *unless* you are up to specify different attributes for, let's say, headers and paragraphs.
+
+###How does it work
+When iOS creates an attributed string from `HTML` it also parses `CSS` attributes. Therefore if you add following `CSS` to your `HTML`<br> ```
+p {
+font-name:"Helvetica";
+font-size:14px;
+}
+h1 {
+font-name:"Georgia";
+font-size:16px;
+}
+```<br>
+Your headers in `NSAttributedString` will have these attributes: <br>`@{NSFontAttributeName : [UIFont fontWithName:@"Georgia" size:16.f]}`<br> whereas paragraphs will be attributed with:<br>`@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica" size:14.f]}`
+###Sample usage
+```objc
+	#import "NSAttributedString+HTMLStyle.h"
+	...
+	UITextView *textView;  
+	NSData *htmlData;
+	textView.attributedText = [NSAttributedString attributedStringFromHTMLData:htmlData];
+	...Or with attributes...
+	NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+	[attributes addAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:17.f]} forHTMLAttribute:QRHTMLAttributeParagraph flatten:YES];
+	textView.attributedText = [NSAttributedString attributedStringFromHTMLData:htmlData attributes:attributes];
+```
+###Installation
+
+#Author
+----
+This repository was originally developed by [Wojtek Czekalski](http://twitter.com/wczekalski) during the developmment of [Quickread](http://quickreadapp.com).

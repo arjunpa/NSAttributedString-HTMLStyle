@@ -8,7 +8,7 @@ Yes, *unless* you are up to specify different attributes for, let's say, headers
 
 ###How does it work
 When iOS creates an attributed string from `HTML` it also parses `CSS` attributes. Therefore if you add following `CSS` to your `HTML`<br> 
-```
+```css
 p {
 font-name:"Helvetica";
 font-size:14px;
@@ -17,9 +17,14 @@ h1 {
 font-name:"Georgia";
 font-size:16px;
 }
-```<br>
-Your headers in `NSAttributedString` will have these attributes: <br>`@{NSFontAttributeName : [UIFont fontWithName:@"Georgia" size:16.f]}`<br> whereas paragraphs will be attributed with:<br>`@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica" size:14.f]}`
+```
+
+Your headers in `NSAttributedString` will have these attributes: <br>`@{NSFontAttributeName : [UIFont fontWithName:@"Georgia" size:16.f]}`
+whereas paragraphs will be attributed with
+`@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica" size:14.f]}`
+
 ###Sample usage
+
 ```objc
 	#import "NSAttributedString+HTMLStyle.h"
 	...
@@ -31,6 +36,7 @@ Your headers in `NSAttributedString` will have these attributes: <br>`@{NSFontAt
 	[attributes addAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:17.f]} forHTMLAttribute:QRHTMLAttributeParagraph flatten:YES];
 	textView.attributedText = [NSAttributedString attributedStringFromHTMLData:htmlData attributes:attributes];
 ```
+
 ###Installation
 
 #Author

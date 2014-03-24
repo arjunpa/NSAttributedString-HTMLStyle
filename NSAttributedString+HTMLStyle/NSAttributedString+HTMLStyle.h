@@ -41,7 +41,7 @@ FOUNDATION_EXPORT QRHTMLAttribute * const QRHTMLAttributeTitle;
 FOUNDATION_EXPORT QRHTMLAttribute * const QRHTMLAttributeDefinition;
 
 /**
- *  A NSAttributedString category which allows to create NSAttributedString from an HTML file easily. Thanks to it you can also add style (either by using CSS file or native attributes.
+ *  Creation of NSAttributedString out of HTML with per-tag attributes made easy.
  */
 
 @interface NSAttributedString (HTMLStyle)
@@ -93,7 +93,7 @@ FOUNDATION_EXPORT QRHTMLAttribute * const QRHTMLAttributeDefinition;
  *  Creates an attributed string from HTML data and attributes parsed from attributes dict.
  *
  *  @param data       HTML data to be processed
- *  @param attributes Key-Value pairs of NSAttributedString attributes.
+ *  @param attributes Key-Value pairs of NSAttributedString attributes keyed under HTML tags.
  *
  *  @return Returns a new instance of NSAttributedString or nil if given data was invalid.
  */

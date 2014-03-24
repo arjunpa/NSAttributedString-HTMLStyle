@@ -46,11 +46,11 @@ FOUNDATION_EXPORT QRHTMLAttribute * const QRHTMLAttributeDefinition;
 
 @interface NSAttributedString (HTMLStyle)
 /**
- *  Creates an attributed string from HTML data. Assumes NSUTF8StringEncoding.
+ *  Creates an attributed string from HTML data. Assumes `NSUTF8StringEncoding`.
  *
  *  @param data Data to be processed.
  *
- *  @return Returns a new instance of NSAttributedString or nil if given data was invalid.
+ *  @return Returns a new instance of `NSAttributedString` or nil if given data was invalid.
  */
 + (instancetype)attributedStringFromHTMLData:(NSData *)data;
 
@@ -60,9 +60,9 @@ FOUNDATION_EXPORT QRHTMLAttribute * const QRHTMLAttributeDefinition;
  *  @param html A string containing HTML.
  *  @param css  A CSS string. If nil, use attributedStringFromHTMLData: instead.
  *
- *  @abstract Don't convert your HTML and CSS into NSStrings from NSData objects. Use attributedStringFromHTMLData:CSSData: instead.
+ *  @abstract Don't convert your HTML and CSS into NSStrings from NSData objects. Use `attributedStringFromHTMLData:CSSData:` instead.
  *
- *  @return Returns a new instance of NSAttributedString or nil if given data was invalid.
+ *  @return Returns a new instance of `NSAttributedString` or nil if given data was invalid.
  */
 
 + (instancetype)attributedStringFromHTMLString:(NSString *)html CSSString:(NSString *)css;
@@ -102,7 +102,7 @@ FOUNDATION_EXPORT QRHTMLAttribute * const QRHTMLAttributeDefinition;
 @end
 
 /**
- *  Convinience methods for dealing with adding attributes to NSAttributedStrings from HTML.
+ *  Convinience methods for dealing with adding attributes to `NSAttributedStrings` from HTML.
  */
 
 @interface NSMutableDictionary (CSS)
@@ -110,8 +110,8 @@ FOUNDATION_EXPORT QRHTMLAttribute * const QRHTMLAttributeDefinition;
 /**
  *  Sets attributes for a given HTML tag.
  *
- *  @param attributes NSDictionary containing key-value pairs of NSAttributedString attributes.
- *  @param tag        HTML tag to be assigned to the attributes
+ *  @param attributes NSDictionary containing key-value pairs of `NSAttributedString` attributes.
+ *  @param tag        `HTML` tag to be assigned to the attributes
  *  @param flatten    if flatten set to yes, the dictionary is converted into CSS string before being added to the receiver.
  */
 
@@ -122,9 +122,9 @@ FOUNDATION_EXPORT QRHTMLAttribute * const QRHTMLAttributeDefinition;
 @interface NSDictionary (CSS)
 
 /**
- *  Parses receiver and creates a NSString with CSS attributes.
+ *  Parses receiver and creates a `NSString` with `CSS` attributes.
  *
- *  @return Returns a NSString with CSS attributes.
+ *  @return Returns a `NSString` with `CSS` attributes.
  */
 
 - (NSString *)CSSStringFromAttributes;
@@ -138,14 +138,14 @@ FOUNDATION_EXPORT QRHTMLAttribute * const QRHTMLAttributeDefinition;
 @interface NSData (HTMLAdditions)
 
 /**
- *  Creates NSData instance with replaced occurencies.
+ *  Creates `NSData` instance with replaced occurencies.
  *
- *  @param data            NSData to be replaced.
- *  @param replacementData NSData to be inserted in place of data.
+ *  @param data            `NSData` to be replaced.
+ *  @param replacementData `NSData` to be inserted in place of `data`.
  *
- *  This method replaces all occurencies of data with replacementData.
+ *  This method replaces all occurencies of `data` with `replacementData`.
  *
- *  @return Returns NSData with replaced contents.
+ *  @return Returns `NSData` with replaced contents.
  */
 
 - (NSData *)dataByReplacingOccurrencesOfData:(NSData *)data withData:(NSData *)replacementData;

@@ -25,13 +25,9 @@
  
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
     
-    NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    [paragraphStyle setLineHeightMultiple:4.f];
-    
-    [attributes addAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica" size:20.f], NSParagraphStyleAttributeName : paragraphStyle} forHTMLAttribute:QRHTMLAttributeStrong flatten:YES];
+    [attributes addAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"Helvetica" size:20.f], NSBackgroundColorAttributeName : [UIColor whiteColor], NSForegroundColorAttributeName : [UIColor whiteColor]} forHTMLAttribute:QRHTMLAttributeStrong flatten:YES];
     [attributes addAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:17.f]} forHTMLAttribute:QRHTMLAttributeParagraph flatten:YES];
     
-   
     
     NSData *htmlData = [unformattedData dataByReplacingOccurrencesOfData:[@"\\n" dataUsingEncoding:NSUTF8StringEncoding] withData:[@"\n" dataUsingEncoding:NSUTF8StringEncoding]];
     

@@ -76,13 +76,20 @@ QRHTMLAttribute * const QRHTMLAttributeDefinition = @"dfn";
 
 - (NSString *)HTMLRGBString {
     UIColor *color = self;
-    const CGFloat *components = CGColorGetComponents(color.CGColor);
     
-    CGFloat r = components[0];
-    CGFloat g = components[1];
-    CGFloat b = components[2];
+    CGFloat red = 0.0, green = 0.0, blue = 0.0, alpha = 0.0;
     
-    return [NSString stringWithFormat:@"rgb(%li, %li, %li)", lroundf(r*255.f), lroundf(g*255.f), lroundf(b*255.f)];
+    if (CGColorGetNumberOfComponents(color.CGColor) == 2) {
+        CGFloat white = 0.f, alpha = 0.f;
+        [color getWhite:&white alpha:&alpha];
+        red = white;
+        green = white;
+        blue = white;
+    } else {
+        [color getRed:&red green:&green blue:&blue alpha:&alpha];
+    }
+    
+    return [NSString stringWithFormat:@"rgb(%li, %li, %li)", lroundf(red*255.f), lroundf(green*255.f), lroundf(blue*255.f)];
 }
 
 @end

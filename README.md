@@ -44,4 +44,5 @@ Install via Cocoapods:
 or copy `NSAttributedString+HTMLStyle.*`
 
 ##Author
-This repository was originally developed by [Wojtek Czekalski](http://twitter.com/wczekalski) during the developmment of [Quickread](http://quickreadapp.com).
+This repository was originally developed by Wojtek Czekalski [@wczekalski](http://twitter.com/wczekalski) during the developmment of [Quickread](http://quickreadapp.com).
+* [me@wczekalski.com](mailto:me@wczekalski.com)

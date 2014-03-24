@@ -7,7 +7,8 @@ This repo consits of a few categories for dealing with `HTML` and `NSAttributedS
 Yes, *unless* you are up to specify different attributes for, let's say, headers and paragraphs.
 
 ###How does it work
-When iOS creates an attributed string from `HTML` it also parses `CSS` attributes. Therefore if you add following `CSS` to your `HTML`<br> ```
+When iOS creates an attributed string from `HTML` it also parses `CSS` attributes. Therefore if you add following `CSS` to your `HTML`<br> 
+```
 p {
 font-name:"Helvetica";
 font-size:14px;

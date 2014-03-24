@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "NSAttributedString+HTMLStyle.h"
 
 @interface NSAttributedString_HTMLStyleTests : XCTestCase
 
@@ -26,9 +27,14 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+- (void)testReplacing {
+    NSData *testData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HTML" ofType:@"html"]];
+    testData = [testData dataByReplacingOccurrencesOfString:@"\\n" withString:@"" encoding:NSUTF8StringEncoding];
+    NSString *testString = [[NSString alloc] initWithData:testData encoding:NSUTF8StringEncoding];
+    
+    NSRange range = [testString rangeOfString:@"\\n"];
+    
+    XCTAssertEqual((NSUInteger)range.location,(NSUInteger) NSNotFound, @"ought not be found");
 }
 
 @end

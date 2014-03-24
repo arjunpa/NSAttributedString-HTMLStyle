@@ -21,6 +21,10 @@
 		C9D329FC18DF0E8C00545909 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D329DE18DF0E8C00545909 /* UIKit.framework */; };
 		C9D32A0418DF0E8C00545909 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9D32A0218DF0E8C00545909 /* InfoPlist.strings */; };
 		C9D32A0618DF0E8C00545909 /* NSAttributedString_HTMLStyleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D32A0518DF0E8C00545909 /* NSAttributedString_HTMLStyleTests.m */; };
+		C9D32A1318DF139D00545909 /* HTML.html in Resources */ = {isa = PBXBuildFile; fileRef = C9D32A1018DF139D00545909 /* HTML.html */; };
+		C9D32A1418DF139D00545909 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = C9D32A1118DF139D00545909 /* style.css */; };
+		C9D32A1718DF13A700545909 /* NSAttributedString+HTMLStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D32A1618DF13A700545909 /* NSAttributedString+HTMLStyle.m */; };
+		C9D32A1818DF243B00545909 /* NSAttributedString+HTMLStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D32A1618DF13A700545909 /* NSAttributedString+HTMLStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		C9D32A0118DF0E8C00545909 /* NSAttributedString+HTMLStyleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSAttributedString+HTMLStyleTests-Info.plist"; sourceTree = "<group>"; };
 		C9D32A0318DF0E8C00545909 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9D32A0518DF0E8C00545909 /* NSAttributedString_HTMLStyleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSAttributedString_HTMLStyleTests.m; sourceTree = "<group>"; };
+		C9D32A1018DF139D00545909 /* HTML.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = HTML.html; sourceTree = "<group>"; };
+		C9D32A1118DF139D00545909 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		C9D32A1518DF13A700545909 /* NSAttributedString+HTMLStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+HTMLStyle.h"; sourceTree = "<group>"; };
+		C9D32A1618DF13A700545909 /* NSAttributedString+HTMLStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+HTMLStyle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,10 @@
 				C9D329EC18DF0E8C00545909 /* Main.storyboard */,
 				C9D329EF18DF0E8C00545909 /* QRViewController.h */,
 				C9D329F018DF0E8C00545909 /* QRViewController.m */,
+				C9D32A1518DF13A700545909 /* NSAttributedString+HTMLStyle.h */,
+				C9D32A1618DF13A700545909 /* NSAttributedString+HTMLStyle.m */,
+				C9D32A1018DF139D00545909 /* HTML.html */,
+				C9D32A1118DF139D00545909 /* style.css */,
 				C9D329F218DF0E8C00545909 /* Images.xcassets */,
 				C9D329E118DF0E8C00545909 /* Supporting Files */,
 			);
@@ -229,9 +241,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9D32A1418DF139D00545909 /* style.css in Resources */,
 				C9D329F318DF0E8C00545909 /* Images.xcassets in Resources */,
 				C9D329E518DF0E8C00545909 /* InfoPlist.strings in Resources */,
 				C9D329EE18DF0E8C00545909 /* Main.storyboard in Resources */,
+				C9D32A1318DF139D00545909 /* HTML.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +266,7 @@
 			files = (
 				C9D329F118DF0E8C00545909 /* QRViewController.m in Sources */,
 				C9D329E718DF0E8C00545909 /* main.m in Sources */,
+				C9D32A1718DF13A700545909 /* NSAttributedString+HTMLStyle.m in Sources */,
 				C9D329EB18DF0E8C00545909 /* QRAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9D32A1818DF243B00545909 /* NSAttributedString+HTMLStyle.m in Sources */,
 				C9D32A0618DF0E8C00545909 /* NSAttributedString_HTMLStyleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +396,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSAttributedString+HTMLStyle/NSAttributedString+HTMLStyle-Prefix.pch";
 				INFOPLIST_FILE = "NSAttributedString+HTMLStyle/NSAttributedString+HTMLStyle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -393,6 +410,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSAttributedString+HTMLStyle/NSAttributedString+HTMLStyle-Prefix.pch";
 				INFOPLIST_FILE = "NSAttributedString+HTMLStyle/NSAttributedString+HTMLStyle-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

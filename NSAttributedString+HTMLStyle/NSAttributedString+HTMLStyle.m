@@ -137,7 +137,7 @@ QRHTMLAttribute * const QRHTMLAttributeDefinition = @"dfn";
                     break;
             }
             
-            [cssString appendFormat:@"line-height:%0.1f em; text-align:%@;", style.lineHeightMultiple, alignment];
+            [cssString appendFormat:@"line-height:%0.1fem; text-align:%@;", style.lineHeightMultiple, alignment];
         } else if (key == NSForegroundColorAttributeName) {
             [cssString appendFormat:@"color:%@; ", [attributes[key] HTMLRGBString]];
         } else if (key == NSBackgroundColorAttributeName ) {

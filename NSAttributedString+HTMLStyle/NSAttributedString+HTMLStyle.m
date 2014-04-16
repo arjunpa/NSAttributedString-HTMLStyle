@@ -9,6 +9,7 @@
 #import "NSAttributedString+HTMLStyle.h"
 #import "regex.h"
 
+QRHTMLAttribute * const QRHTMLAttributeBody = @"body";
 QRHTMLAttribute * const QRHTMLAttributeParagraph = @"p";
 QRHTMLAttribute * const QRHTMLAttributeLink = @"a";
 QRHTMLAttribute * const QRHTMLAttributeHeader1 = @"h1";

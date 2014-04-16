@@ -10,6 +10,7 @@
 
 typedef NSString QRHTMLAttribute;
 
+FOUNDATION_EXPORT QRHTMLAttribute * const QRHTMLAttributeBody;
 FOUNDATION_EXPORT QRHTMLAttribute * const QRHTMLAttributeParagraph;
 FOUNDATION_EXPORT QRHTMLAttribute * const QRHTMLAttributeLink;
 FOUNDATION_EXPORT QRHTMLAttribute * const QRHTMLAttributeHeader1;
